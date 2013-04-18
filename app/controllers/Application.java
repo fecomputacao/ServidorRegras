@@ -18,6 +18,7 @@ import play.exceptions.CompilationException;
 import play.mvc.Controller;
 
 import java.util.Arrays;
+import java.util.List;
 
 public class Application extends Controller {
 
@@ -51,6 +52,13 @@ public class Application extends Controller {
                 )));
 
         render(bresults);
+    }
+
+    public static void testeJson(Long id) {
+    	
+    	List<Person> persons = Person.all().fetch();
+    	
+    	renderJSON(persons);
     }
 
 }
