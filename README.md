@@ -20,8 +20,6 @@ Instalação:
 IMPORTANTE
 ==============
 
-The problem comes as the Drools is not able to resolve the play models.In eclipse it works fine as it add eclipse/classes to the classpath.But whenever you run "Play run" drools is not able to find the play.models.So to overcome this we need to add the "tmp/classes" to the classpath.
-
 Existe um problema no qual o Drools não consegue enxergar as models do play. Para resolver isso, é necessário adicionar a pasta "tmp/classes" ao classpath seguindo os seguintes passos: (vide: http://stackoverflow.com/questions/8398517/only-a-type-can-be-imported-models-xyz-resolves-to-a-package)
 
 
