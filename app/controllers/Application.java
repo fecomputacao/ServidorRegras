@@ -1,6 +1,7 @@
 package controllers;
 
 import models.Person;
+
 import org.drools.KnowledgeBase;
 import org.drools.KnowledgeBaseConfiguration;
 import org.drools.KnowledgeBaseFactory;
@@ -13,6 +14,7 @@ import org.drools.io.ResourceFactory;
 import org.drools.runtime.ExecutionResults;
 import org.drools.runtime.StatelessKnowledgeSession;
 
+import flexjson.JSONSerializer;
 import play.Play;
 import play.exceptions.CompilationException;
 import play.mvc.Controller;
@@ -20,7 +22,7 @@ import play.mvc.Controller;
 import java.util.Arrays;
 import java.util.List;
 
-public class Application extends Controller {
+public class Application extends DefaultController {
 
     public static void index() {
 
@@ -58,7 +60,10 @@ public class Application extends Controller {
     	
     	List<Person> persons = Person.all().fetch();
     	
-    	renderJSON(persons);
+    	JSONSerializer serializer = new JSONSerializer();
+    	serializer.include("name", "pets.name", "pets.age", "pets.type.name").exclude("*");
+    	
+    	renderJSON(persons, serializer);
     }
 
 }

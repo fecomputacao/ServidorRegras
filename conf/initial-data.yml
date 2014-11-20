@@ -3,12 +3,26 @@
 Person(homer):
     name: Homer
 
+PetType(cat):
+    name: CAT
+
+PetType(dog):
+    name: DOG
+
 Pet(dog1):
-    type: PetType.DOG
+    type: dog
     name: Milou
     owner: homer
+    age: 5
 
 Pet(cat1):
-    type: PetType.CAT
+    type: cat
     name: Hello kitty
     owner: homer
+    age: 2
+    
+Pet(cat2):
+    type: cat
+    name: Chico
+    owner: homer
+    age: 12

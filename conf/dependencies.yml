@@ -4,6 +4,7 @@ require:
     - play
     - org.drools -> drools-core 5.5.0.Final
     - org.drools -> drools-compiler 5.5.0.Final
+    - net.sf.flexjson -> flexjson 2.1
 
 repositories:
     - jboss:

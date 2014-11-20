@@ -15,7 +15,7 @@ public class Person extends Model {
     
     public String name;
 
-//    @OneToMany(mappedBy = "owner", cascade = CascadeType.ALL)
-//    public Set<Pet> pets = new HashSet<Pet>();
+    @OneToMany(mappedBy = "owner", cascade = CascadeType.ALL)
+    public Set<Pet> pets = new HashSet<Pet>();
 
 }

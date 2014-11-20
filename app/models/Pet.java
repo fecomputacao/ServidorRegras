@@ -14,7 +14,10 @@ public class Pet extends Model {
     public Person owner;
 
     public String name;
+    
+    public Integer age;
 
+    @ManyToOne
     public PetType type;
 
 }

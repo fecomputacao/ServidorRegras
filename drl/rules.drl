@@ -7,7 +7,7 @@ import models.PetType;
 rule "Print cat from a person"
   when
     $p: Person($pets: pets)
-    $cat: Pet(type == PetType.CAT) from $pets
+    $cat: Pet(type.name == "CAT" && age > 5) from $pets
   then
-    System.out.println($p.name +" has a cat called "+$cat.name);
+    System.out.println($p.name + " has a old cat called " + $cat.name);
 end

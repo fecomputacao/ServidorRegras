@@ -1,9 +1,14 @@
 package models;
 
+import javax.persistence.Entity;
+
+import play.db.jpa.Model;
+
 /**
  */
-public enum PetType {
+@Entity
+public class PetType extends Model {
 
-    DOG, CAT
+    public String name;
 
 }
